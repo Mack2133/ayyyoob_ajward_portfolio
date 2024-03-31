@@ -18,7 +18,7 @@ function TypeAnimationCustom() {
           ]}
           wrapper="span"
           speed={50}
-          style={{ display: "inline-block" }}
+          style={{ display: "inline-block" ,fontSize:"1.5em"}}
           repeat={Infinity}
         />
     </div>
