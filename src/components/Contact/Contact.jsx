@@ -8,7 +8,7 @@ function Contact() {
           Contact
         </h1>
       </div>
-      <div className="w-full p-10 px-10 bg-gray-100 border-gray-300 rounded-lg md:w-3/5 backdrop:blur-md opacity-85 border-1">
+      <div className="w-full p-10 px-10 border-none rounded-lg md:bg-gray-100 bg-none md:border-gray-300 md:w-3/5 backdrop:blur-md opacity-85 md:border-1">
         <form>
           <div className="mb-4">
             <label

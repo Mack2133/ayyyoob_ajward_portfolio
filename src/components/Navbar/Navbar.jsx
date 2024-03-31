@@ -12,7 +12,7 @@ function Navbar() {
   };
 
   return (
-    <div className="sticky top-0 z-99999">
+    <div className="">
       <nav className=" shadow-sm border-b-1.5 bg-gray-50 bg-opacity-85 backdrop-blur-md h-[90px]">
       <div className="container flex items-center justify-between h-full px-10 mx-auto lg:px-20">
         <CustomTooltip title={"Ayyoob Ajward"}>
