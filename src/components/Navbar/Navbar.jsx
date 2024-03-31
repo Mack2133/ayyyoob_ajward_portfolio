@@ -10,7 +10,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 shadow-sm border-b-1.5 bg-gray-50 bg-opacity-95 backdrop-blur-sm h-[90px] z-9000">
+    <nav className="sticky top-0 left-0 shadow-sm border-b-1.5 bg-gray-50 bg-opacity-85 backdrop-blur-md h-[90px] z-9000 position: -webkit-sticky;">
       <div className="container flex items-center justify-between h-full px-10 mx-auto lg:px-20">
         <CustomTooltip title={"Ayyoob Ajward"}>
           <Avatar
