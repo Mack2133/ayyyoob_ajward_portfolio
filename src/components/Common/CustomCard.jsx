@@ -3,7 +3,7 @@ import { Card, CardHeader, CardBody, Image, Chip } from "@nextui-org/react";
 function CustomCard({ title1, description, title2, image, technologies, id }) {
   return (
     <>
-      <Card className="py-4">
+      <Card className="px-10 py-4 md:px-0">
         <CardBody className="flex py-2 overflow-visible">
           <Image
             alt="Card background"
