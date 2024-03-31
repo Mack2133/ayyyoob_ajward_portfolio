@@ -13,10 +13,10 @@ export default function App() {
       <Navbar />
       <Hero />
       <TechStack />
-      <About />
-      <Projects />
-      <Contact />
+      <About id={"about"} />
+      <Projects id={"projects"} />
+      <Contact id={"contact"} />
       <Footer />
     </div>
-  )
+  );
 }

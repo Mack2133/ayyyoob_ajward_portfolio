@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Avatar } from "@nextui-org/react";
 import CustomTooltip from "../Common/Tooltip";
+import { myImage } from "../Common/myImage";
 
 function Navbar() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -10,13 +12,14 @@ function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 left-0 shadow-sm border-b-1.5 bg-gray-50 bg-opacity-85 backdrop-blur-md h-[90px] z-9000 position: -webkit-sticky;">
+    <div className="sticky top-0 z-99999">
+      <nav className=" shadow-sm border-b-1.5 bg-gray-50 bg-opacity-85 backdrop-blur-md h-[90px]">
       <div className="container flex items-center justify-between h-full px-10 mx-auto lg:px-20">
         <CustomTooltip title={"Ayyoob Ajward"}>
           <Avatar
             isBordered
             color="primary"
-            src={"public/img/ayyoob-ajward.png"}
+            src={myImage}
             size="xl"
             className="cursor-pointer"
           />
@@ -77,6 +80,7 @@ function Navbar() {
         </div>
       </div>
     </nav>
+    </div>
   );
 }
 

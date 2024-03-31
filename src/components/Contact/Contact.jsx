@@ -2,13 +2,13 @@ import React from "react";
 
 function Contact() {
   return (
-    <div className="flex flex-col items-center pb-12 bg-gray-50 customSection">
+    <div className="flex flex-col items-center pb-12 bg-gray-50 customSection" id="contact">
       <div>
         <h1 className="pt-12 pb-10 text-5xl font-bold text-center text-blue-600 md:pb-12 lg:text-7xl md:text-5xl md:pt-0">
           Contact
         </h1>
       </div>
-      <div className="w-full p-10 px-10 bg-gray-100 border-gray-300 rounded-lg md:w-4/12 backdrop:blur-md opacity-85 border-1">
+      <div className="w-full p-10 px-10 bg-gray-100 border-gray-300 rounded-lg md:w-3/5 backdrop:blur-md opacity-85 border-1">
         <form>
           <div className="mb-4">
             <label
