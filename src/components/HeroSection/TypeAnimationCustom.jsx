@@ -32,7 +32,7 @@ function TypeAnimationCustom() {
         ]}
         wrapper="span"
         speed={50}
-        style={{ display: "inline-block" ,fontSize:"1.2rem"}}
+        style={{ display: "inline-block" ,fontSize:"1.1rem"}}
         repeat={Infinity}
         >
           
