@@ -28,7 +28,7 @@ function HeroSection() {
         <div className="max-w-full">
           <div className="overflow-hidden border-8 border-gray-200 rounded-full w-60 h-60">
             <img
-              src="../../../public/img/ayyoob ajward.png"
+              src="../../../public/img/ayyoob-ajward.png"
               className="object-cover w-full h-full"
               alt="Ayyoob Ajward"
             />

@@ -16,7 +16,7 @@ function Navbar() {
           <Avatar
             isBordered
             color="primary"
-            src={"public/img/ayyoob ajward.png"}
+            src={"public/img/ayyoob-ajward.png"}
             size="xl"
             className="cursor-pointer"
           />
