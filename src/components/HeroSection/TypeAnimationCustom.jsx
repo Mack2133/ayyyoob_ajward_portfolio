@@ -4,10 +4,11 @@ import './Type.css';
 
 function TypeAnimationCustom() {
 
+  const screen = window.screen.width;
 
   return (
-    <div>
-        <TypeAnimation
+    <div className="pb-12 sm:pb-0">
+        {screen > 480 ? <TypeAnimation
           sequence={[
             'you call me as "Full Stack Developer".',
             1000,
@@ -18,9 +19,25 @@ function TypeAnimationCustom() {
           ]}
           wrapper="span"
           speed={50}
-          style={{ display: "inline-block" ,fontSize:"1.5em"}}
+          style={{ display: "inline-block" ,fontSize:"1.5rem"}}
           repeat={Infinity}
-        />
+        /> : <TypeAnimation
+        sequence={[
+          'I am a "Full Stack Developer".',
+          1000,
+          'I am a "(AL-Alim) Islamic Scholar".',
+          1000,
+          'I am a "Digital Marketer".',
+          1000,
+        ]}
+        wrapper="span"
+        speed={50}
+        style={{ display: "inline-block" ,fontSize:"1.2rem"}}
+        repeat={Infinity}
+        >
+          
+          
+          </TypeAnimation>}
     </div>
   )
 }

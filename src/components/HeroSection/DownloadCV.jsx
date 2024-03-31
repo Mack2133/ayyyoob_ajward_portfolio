@@ -5,7 +5,7 @@ function DownloadCV() {
   return (
     <div className="flex my-5 space-x-5">
       <CustomTooltip title={"Download CV/Resume"}>
-        <button className="py-3 px-7 btn">Download CV</button>
+        <button className="px-4 py-3 md:px-7 btn">Download CV</button>
       </CustomTooltip>
       <CustomTooltip title={"visit my linkedin"}>
         <SocialIcon
