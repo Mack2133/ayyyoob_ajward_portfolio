@@ -5,6 +5,7 @@ import TechStack from "./components/TechStack/TechStack";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer/Footer";
+import Contact from "./components/Contact/Contact";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <TechStack />
       <About />
       <Projects />
+      <Contact />
       <Footer />
     </div>
   )

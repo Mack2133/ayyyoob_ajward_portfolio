@@ -1,12 +1,13 @@
 import { TypeAnimation } from 'react-type-animation';
 import CustomTooltip from '../Common/Tooltip';
+import { SocialIcon } from 'react-social-icons'
+
 
 function HeroSection() {
   return (
     <div className="min-h-[600px] w-full flex justify-between items-center md:px-36 pb-10">
       <div className="max-w-full">
-        <h1 className="font-bold text-blue-600 text-7xl">I'am Ayyoob Ajward</h1>
-        
+        <h1 className="pb-2 font-bold text-blue-600 text-7xl">I'am Ayyoob Ajward</h1>
         <TypeAnimation
           sequence={[
             'you call me as "Full Stack Developer".',
@@ -23,6 +24,17 @@ function HeroSection() {
           style={{ fontSize: '2rem', display: 'inline-block' }}
           repeat={Infinity}
         />
+        <div className='flex my-5 space-x-5'>
+        <CustomTooltip title={"Download CV/Resume"}>
+           <button className='py-3 px-7 btn'>Download CV</button>
+        </CustomTooltip>
+        <CustomTooltip title={"visit my linkedin"}>
+          <SocialIcon url="https://www.linkedin.com/in/ayyoob-ajward/" fgColor="#fff" bgColor="#000" style={{ height: 50, width: 50 }} />
+        </CustomTooltip>
+        <CustomTooltip title={"visit my github"}>
+          <SocialIcon url="https://www.github.com/Mack2133" fgColor="#fff" bgColor="#000" style={{ height: 50, width: 50 }} />
+        </CustomTooltip>
+        </div>
       </div>
       <CustomTooltip title={"Ayyoob Ajward"}>
         <div className="max-w-full">

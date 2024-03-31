@@ -10,4 +10,8 @@
     .customSection {
         @apply min-h-[100vh] flex justify-center pt-24 pb-24;
     }
+
+    .btn {
+        @apply px-5 py-2 font-medium text-white transition-colors delay-100 bg-blue-600 rounded-md cursor-pointer lg:block hover:bg-blue-700
+    }
 }

@@ -57,7 +57,7 @@ function Navbar() {
               <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600">About</li>
               <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600">Contact</li>
               <CustomTooltip title="Hire Me">
-                <button className="px-5 py-2 font-medium text-white transition-colors delay-100 bg-blue-600 rounded-md cursor-pointer lg:block hover:bg-blue-700">Hire Me</button>
+                <button className="btn">Hire Me</button>
               </CustomTooltip>
             </ul>
           </div>
