@@ -13,9 +13,12 @@
     "@nextui-org/react": "^2.2.10",
     "framer-motion": "^11.0.24",
     "react": "^18.2.0",
+    "react-animated-cursor": "^2.11.2",
     "react-dom": "^18.2.0",
+    "react-fast-marquee": "^1.6.4",
     "react-social-icons": "^6.15.0",
-    "react-type-animation": "^3.2.0"
+    "react-type-animation": "^3.2.0",
+    "tech-stack-icons": "^2.0.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.64",

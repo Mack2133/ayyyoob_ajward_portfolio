@@ -10,7 +10,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 shadow-sm border-b-1.5 bg-gray-50 bg-opacity-95 backdrop-blur-sm h-[90px]">
+    <nav className="sticky top-0 shadow-sm border-b-1.5 bg-gray-50 bg-opacity-95 backdrop-blur-sm h-[90px] z-10">
       <div className="container flex items-center justify-between h-full px-10 mx-auto lg:px-20">
         <CustomTooltip title={"Ayyoob Ajward"}>
           <Avatar
@@ -60,6 +60,19 @@ function Navbar() {
                 <button className="btn">Hire Me</button>
               </CustomTooltip>
             </ul>
+
+
+            {/* Navigation bar for small screens */}
+          {isMenuOpen && (
+            <ul className="absolute left-0 right-0 flex flex-col px-4 py-4 mt-1 space-y-4 shadow-md lg:hidden top-full bg-gray-50 bg-opacity-95">
+              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600">Projects</li>
+              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600">About</li>
+              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600">Contact</li>
+              <CustomTooltip title="Hire Me">
+                <button className="btn">Hire Me</button>
+              </CustomTooltip>
+            </ul>
+          )}
           </div>
         </div>
       </div>
