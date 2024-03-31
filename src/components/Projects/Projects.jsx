@@ -55,7 +55,7 @@ function Projects() {
   return (
     <div className="flex flex-col items-center justify-start pb-24 bg-gray-200 customSection">
       <div>
-        <h1 className="pt-24 pb-24 font-bold text-center text-blue-600 md:pt-0 text-7xl">
+        <h1 className="pt-24 pb-24 text-5xl font-bold text-center text-blue-600 md:pt-0 lg:text-7xl md:text-5xl">
           Projects
         </h1>
         <div className="z-0 grid grid-cols-1 gap-5 px-10 md:grid-cols-3 sm:grid-cols-2 sm:gap-5 md:px-0">
