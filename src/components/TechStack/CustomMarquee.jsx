@@ -31,7 +31,7 @@ const stacks = [
 
 function CustomMarquee() {
   return (
-    <div className="space-x-5">
+    <div className="space-x-10">
         {stacks.map((stack,index) => {
             return (
                 <StackIcon

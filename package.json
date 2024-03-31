@@ -16,9 +16,11 @@
     "react-animated-cursor": "^2.11.2",
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.4",
+    "react-scroll-to-top": "^3.0.0",
     "react-social-icons": "^6.15.0",
     "react-type-animation": "^3.2.0",
-    "tech-stack-icons": "^2.0.3"
+    "tech-stack-icons": "^2.0.3",
+    "tw-elements-react": "^1.0.0-alpha2"
   },
   "devDependencies": {
     "@types/react": "^18.2.64",

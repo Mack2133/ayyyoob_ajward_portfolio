@@ -12,7 +12,7 @@ function Footer() {
                 </div>
             </div>
             <div>
-                <p className='font-bold'>&copy; 2021. All rights reserved.</p>
+                <p className='font-bold'>&copy; 2024. All rights reserved.</p>
             </div>
         </footer>
     )

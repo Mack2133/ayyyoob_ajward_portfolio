@@ -3,7 +3,7 @@ import CustomMarquee from "./CustomMarquee";
 
 function TechStack() {
   return (
-    <div className="flex items-center justify-center h-40 space-x-5 bg-blue-600">
+    <div className="flex items-center justify-center h-40 bg-gray-800">
       <Marquee
       speed={80}
       >

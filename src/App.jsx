@@ -14,7 +14,7 @@ export default function App() {
       <Hero />
       <TechStack />
       <About />
-      {/* <Projects /> */}
+      <Projects />
       <Contact />
       <Footer />
     </div>
