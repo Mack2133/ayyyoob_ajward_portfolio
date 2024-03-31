@@ -6,4 +6,8 @@
     body {
         @apply bg-gray-50;
     }
+
+    .customSection {
+        @apply min-h-[100vh] flex justify-center pt-24 pb-24;
+    }
 }
