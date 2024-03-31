@@ -3,7 +3,7 @@ import React from 'react'
 function About() {
   return (
     <div className='customSection' id='about'>
-        <div className='px-10 pt-12 bg-gray-100 border-gray-300 shadow-sm lg:px-24 rounded-xl lg:w-3/4 backdrop:blur-sm border-1'>
+        <div className='px-10 pt-12 bg-gray-100 border-gray-300 rounded-none shadow-none md:shadow-sm lg:px-24 md:rounded-xl lg:w-3/4 backdrop:blur-sm border-1'>
             <h1 className='pb-10 text-5xl font-bold text-center text-blue-600 lg:text-7xl md:text-5xl'>About Me</h1>
             <p className='pb-20 lg:text-center max-md:text-left'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos et magnam quas cumque ullam, officiis cupiditate voluptatibus ex illum, vero unde voluptate quo quasi? Nostrum rerum cum consectetur quae nobis?</p>
             <p className='pb-20'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit corrupti minima, beatae at facilis vero voluptate expedita perferendis dolor qui eos totam animi cupiditate pariatur possimus enim, laudantium est ipsam.
