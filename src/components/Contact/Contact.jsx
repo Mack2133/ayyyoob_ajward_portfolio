@@ -1,6 +1,24 @@
-import React from "react";
+import { set, useForm } from "react-hook-form";
 
 function Contact() {
+  const {register,handleSubmit, setError, formState: {errors, isSubmitting}} = useForm(
+    {defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      message: "Hi there! I would like to know more about you."
+    }}
+  );
+
+  const onSubmit = async (data) => {
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 1000))
+      console.log(data)
+
+    } catch (error) {
+    }
+  };
+
   return (
     <div className="flex flex-col items-center pb-12 bg-gray-50 customSection" id="contact">
       <div>
@@ -9,7 +27,7 @@ function Contact() {
         </h1>
       </div>
       <div className="w-full p-10 px-10 border-none rounded-lg md:bg-gray-100 bg-none md:border-gray-300 md:w-3/5 backdrop:blur-md opacity-85 md:border-1">
-        <form>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-4">
             <label
               htmlFor="name"
@@ -22,6 +40,7 @@ function Contact() {
               id="name"
               name="name"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              {...register("name", { required: true })}
             />
           </div>
           <div className="mb-4">
@@ -36,7 +55,12 @@ function Contact() {
               id="email"
               name="email"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              {...register("email", { 
+                required: true, 
+                pattern: /^\S+@\S+\.\S+$/i
+              })}
             />
+            {errors.email && <p className="text-red-500">Please enter a valid email address</p>}
           </div>
           <div className="mb-4">
             <label
@@ -46,11 +70,16 @@ function Contact() {
               Phone
             </label>
             <input
-              type="phone"
+              type="tel"
               id="phone"
               name="phone"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              {...register("phone", { 
+                required: true, 
+                pattern: /^(?:0|\d{10})$/
+              })}
             />
+            {errors.phone && <p className="text-red-500 ">Please enter a valid phone number</p>}
           </div>
           <div className="mb-4">
             <label
@@ -64,13 +93,17 @@ function Contact() {
               name="message"
               rows="4"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-            ></textarea>
+              {...register("message")}
+            >
+
+            </textarea>
           </div>
           <button
+            disabled={isSubmitting}
             type="submit"
             className="px-6 py-3 text-lg font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700"
           >
-            Submit
+            {isSubmitting ? "Submitting..." : "Submit"}
           </button>
         </form>
       </div>
