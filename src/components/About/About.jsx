@@ -1,19 +1,50 @@
-import React from 'react'
 
 function About() {
   return (
-    <div className='customSection' id='about'>
-        <div className='px-10 pt-12 bg-gray-100 border-gray-300 rounded-none shadow-none md:shadow-sm lg:px-24 md:rounded-xl lg:w-3/4 backdrop:blur-sm border-1'>
-            <h1 className='pb-10 text-5xl font-bold text-center text-blue-600 lg:text-7xl md:text-5xl'>About Me</h1>
-            <p className='pb-20 lg:text-center max-md:text-left'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos et magnam quas cumque ullam, officiis cupiditate voluptatibus ex illum, vero unde voluptate quo quasi? Nostrum rerum cum consectetur quae nobis?</p>
-            <p className='pb-20'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit corrupti minima, beatae at facilis vero voluptate expedita perferendis dolor qui eos totam animi cupiditate pariatur possimus enim, laudantium est ipsam.
-            Atque consequuntur sunt possimus excepturi, repellat sequi assumenda pariatur nemo laboriosam tenetur inventore provident ullam fugiat, fuga quasi a est modi voluptatibus, enim unde natus aliquam hic in doloribus. Ullam!
-            Illo modi dignissimos deleniti similique exercitationem delectus possimus reiciendis explicabo vitae maxime libero, a maiores sit officiis? Voluptatum ex nulla nemo? Minima, ipsa et deleniti laboriosam eligendi veniam at sequi!
-            Animi quisquam similique cumque atque eos rerum quasi autem rem sint eveniet. Saepe ad voluptatibus placeat ex odio nam repellendus, ullam, deleniti amet distinctio ea! Aperiam id porro placeat ratione.
-            Repellendus voluptatem dicta nobis ipsum provident quis non corporis ducimus obcaecati dolor! Ex voluptatibus hic, impedit possimus suscipit error aperiam repudiandae minus quia ea at, a libero adipisci velit ipsam?</p>
-        </div>
+    <div className="customSection" id="about">
+      <div className="px-10 pt-12 bg-gray-100 border-gray-300 rounded-none shadow-none md:shadow-sm lg:px-24 md:rounded-xl lg:w-3/4 backdrop:blur-sm border-1">
+        <h1 className="pb-10 text-5xl font-bold text-center text-blue-600 lg:text-7xl md:text-5xl">
+          About Me
+        </h1>
+        <p className="pb-20 lg:text-center max-md:text-left">
+          Hello! I'm Ayyoob Ajward, a passionate and self-motivated Computer
+          Science undergraduate with a knack for crafting innovative software
+          solutions. My journey in technology began with a curiosity that has
+          since evolved into proficiency in various programming languages and
+          frameworks such as <span className="font-bold">Java, Python, React, and Flutter. </span> 
+        </p>
+        <p className="pb-20 text-justify">
+         My experience
+          spans both web and <span className="font-bold">mobile app development</span>, where I thrive on
+          unraveling code intricacies and constantly honing my skills through
+          exploration and documentation of emerging technologies. I pride myself
+          on being a collaborative <span className="font-bold">team player</span>, known for delivering
+          high-quality work that exceeds expectations. I've contributed to
+          various projects, including developing a <span className="font-bold">Mental Health Chatbot Mobile
+          Application using Flutter, Django, and MongoDB</span>, and crafting a <span>Food
+          Queue Management System using Java</span>. These experiences have not only
+          deepened my understanding of software development but also enhanced my
+          <span className="font-bold">problem-solving abilities</span>
+          
+          </p>
+          <p className="pb-20 text-justify">
+          In addition to technical skills, I'm
+          <span className="font-bold"> certified in digital marketing</span> and advertising strategies by Google
+          and LinkedIn. My commitment to continuous learning is evident through
+          my involvement in various extracurricular activities, such as serving
+          as a <span className="font-bold">member of PR & Media at Mozilla Campus Club and volunteering for
+          IEEE</span>. Outside of the tech realm, I indulge in studying geopolitics and
+          refining my soft skills, including leadership, attention to detail,
+          and critical thinking. As a Sri Lankan national fluent in Sinhala,
+          English, Tamil, and Arabic, I bring a diverse perspective to every
+          project I undertake. If you're seeking a motivated and dynamic
+          individual with a passion for technology and a drive to excel, I'd
+          love to connect and explore how we can collaborate on exciting
+          ventures together.
+        </p>
+      </div>
     </div>
-  )
+  );
 }
 
-export default About
+export default About;

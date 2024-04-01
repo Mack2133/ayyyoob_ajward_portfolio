@@ -17,8 +17,8 @@ export const projects = [
     },
     {
       id: 3,
-      title: "Cashier Management System",
-      description: "Description of Project 3",
+      title: "Food Queue Management System",
+      description: "Food Queue Management System for a small business.",
       image:
             "https://img.freepik.com/free-photo/cashier_53876-42752.jpg?t=st=1711905183~exp=1711908783~hmac=8cb9f1fc260600eb91ac44c9aed6144d178e8223c735600b66c422f060edeef7&w=1800",
       technologies: ["Java", "OOP",]

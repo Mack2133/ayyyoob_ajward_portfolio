@@ -56,8 +56,8 @@ function Navbar() {
 
           <div className={`${isMenuOpen ? "flex" : ""}`}>
             <ul className={`lg:flex hidden items-center space-x-16`}>
-              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600">Projects</li>
               <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600">About</li>
+              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600">Projects</li>
               <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600">Contact</li>
               <CustomTooltip title="Hire Me">
                 <button className="btn">Hire Me</button>
@@ -67,9 +67,9 @@ function Navbar() {
 
             {/* Navigation bar for small screens */}
           {isMenuOpen && (
-            <ul className="absolute left-0 right-0 flex flex-col px-4 py-4 mt-1 space-y-4 shadow-md lg:hidden top-full bg-gray-50 bg-opacity-95">
-              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600">Projects</li>
+            <ul className="absolute left-0 right-0 flex flex-col px-4 py-4 mt-1 space-y-4 shadow-md lg:hidden top-full bg-gray-50 bg-opacity-95 ">
               <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600">About</li>
+              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600">Projects</li>
               <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600">Contact</li>
               <CustomTooltip title="Hire Me">
                 <button className="btn">Hire Me</button>
