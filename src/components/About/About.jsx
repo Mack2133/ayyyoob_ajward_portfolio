@@ -6,7 +6,7 @@ function About() {
         <h1 className="pb-10 text-5xl font-bold text-center text-blue-600 lg:text-7xl md:text-5xl">
           About Me
         </h1>
-        <p className="pb-20 lg:text-center max-md:text-left">
+        <p className="pb-20 lg:text-center max-md:text-justify">
           Hello! I'm Ayyoob Ajward, a passionate and self-motivated Computer
           Science undergraduate with a knack for crafting innovative software
           solutions. My journey in technology began with a curiosity that has
@@ -29,7 +29,7 @@ function About() {
           </p>
           <p className="pb-20 text-justify">
           In addition to technical skills, I'm
-          <span className="font-bold"> certified in digital marketing</span> and advertising strategies by Google
+          <span className="font-bold">certified in digital marketing</span> and advertising strategies by Google
           and LinkedIn. My commitment to continuous learning is evident through
           my involvement in various extracurricular activities, such as serving
           as a <span className="font-bold">member of PR & Media at Mozilla Campus Club and volunteering for
