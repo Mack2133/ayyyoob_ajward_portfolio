@@ -1,21 +1,25 @@
 import { set, useForm } from "react-hook-form";
-import emailjs from "@emailjs/browser"
-import axios from "axios";
-
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
 function Contact() {
-  const {register,handleSubmit, setError, formState: {errors, isSubmitting}} = useForm(
-    {defaultValues: {
+  const {
+    register,
+    handleSubmit,
+    setError,
+    formState: { errors, isSubmitting },
+  } = useForm({
+    defaultValues: {
       name: "",
       email: "",
       phone: "",
-      message: "Hi there! I would like to know more about you."
-    }}
-  );
+      message: "Hi there! I would like to know more about you.",
+    },
+  });
 
+  const [emailStatus, setEmailStatus] = useState(null);
 
   const onSubmit = async (data) => {
-
     const serviceId = "service_4g9e03l";
     const templateId = "template_bijdsdj";
     const publicKey = "kFg-904JjLdAhpCr8";
@@ -24,26 +28,44 @@ function Contact() {
       name: data.name,
       email: data.email,
       phone: data.phone,
-      message: data.message
-    }
+      message: data.message,
+    };
 
     try {
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
-      console.log('Email sent successfully!');
+      setEmailStatus("success");
+      setTimeout(() => {
+        setEmailStatus(null);
+      },3000)
     } catch (error) {
-      console.error('Error sending email:', error);
+      setEmailStatus("error");
+      console.error("Error sending email:", error);
     }
-    
-  }
+  };
 
   return (
-    <div className="flex flex-col items-center pb-12 bg-gray-50 customSection" id="contact">
+    <div
+      className="flex flex-col items-center pb-12 bg-gray-50 customSection"
+      id="contact"
+    >
       <div>
         <h1 className="pt-12 pb-10 text-5xl font-bold text-center text-blue-600 md:pb-12 lg:text-7xl md:text-5xl md:pt-0">
           Contact
         </h1>
       </div>
       <div className="w-full p-10 px-10 border-none rounded-lg md:bg-gray-100 bg-none md:border-gray-300 md:w-3/5 backdrop:blur-md opacity-85 md:border-1">
+        <div className={emailStatus === "success" || emailStatus === "error" ? "py-5" : "hidden"}>
+          {emailStatus === "success" && (
+            <p className="text-2xl font-bold text-green-500">
+              Email sent successfully!
+            </p>
+          )}
+          {emailStatus === "error" && (
+            <p className="text-2xl font-bold text-red-500">
+              Error sending email. Please try again later.
+            </p>
+          )}
+        </div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-4">
             <label
@@ -72,12 +94,14 @@ function Contact() {
               id="email"
               name="email"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-              {...register("email", { 
-                required: true, 
-                pattern: /^\S+@\S+\.\S+$/i
+              {...register("email", {
+                required: true,
+                pattern: /^\S+@\S+\.\S+$/i,
               })}
             />
-            {errors.email && <p className="text-red-500">Please enter a valid email address</p>}
+            {errors.email && (
+              <p className="text-red-500">Please enter a valid email address</p>
+            )}
           </div>
           <div className="mb-4">
             <label
@@ -91,12 +115,14 @@ function Contact() {
               id="phone"
               name="phone"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-              {...register("phone", { 
-                required: true, 
-                pattern: /^(?:0|\d{10})$/
+              {...register("phone", {
+                required: true,
+                pattern: /^(?:0|\d{10})$/,
               })}
             />
-            {errors.phone && <p className="text-red-500 ">Please enter a valid phone number</p>}
+            {errors.phone && (
+              <p className="text-red-500 ">Please enter a valid phone number</p>
+            )}
           </div>
           <div className="mb-4">
             <label
@@ -111,9 +137,7 @@ function Contact() {
               rows="4"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               {...register("message")}
-            >
-
-            </textarea>
+            ></textarea>
           </div>
           <button
             disabled={isSubmitting}
