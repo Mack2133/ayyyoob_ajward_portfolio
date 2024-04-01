@@ -1,4 +1,7 @@
 import { set, useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser"
+import axios from "axios";
+
 
 function Contact() {
   const {register,handleSubmit, setError, formState: {errors, isSubmitting}} = useForm(
@@ -10,14 +13,28 @@ function Contact() {
     }}
   );
 
-  const onSubmit = async (data) => {
-    try {
-      await new Promise((resolve) => setTimeout(resolve, 1000))
-      console.log(data)
 
-    } catch (error) {
+  const onSubmit = async (data) => {
+
+    const serviceId = "service_4g9e03l";
+    const templateId = "template_bijdsdj";
+    const publicKey = "kFg-904JjLdAhpCr8";
+
+    const templateParams = {
+      name: data.name,
+      email: data.email,
+      phone: data.phone,
+      message: data.message
     }
-  };
+
+    try {
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      console.log('Email sent successfully!');
+    } catch (error) {
+      console.error('Error sending email:', error);
+    }
+    
+  }
 
   return (
     <div className="flex flex-col items-center pb-12 bg-gray-50 customSection" id="contact">
