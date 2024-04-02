@@ -2,10 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
+import { BrowserRouter } from "react-router-dom";
 // import AnimatedCursor from "react-animated-cursor";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <BrowserRouter>
     <App />
     {/* <AnimatedCursor
     color="255, 255, 255"
@@ -21,5 +23,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       backgroundColor: 'var(--cursor-color)'
     }} */}
     {/* /> */}
+    </BrowserRouter>
   </React.StrictMode>
 );

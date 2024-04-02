@@ -45,11 +45,11 @@ function Contact() {
 
   return (
     <div
-      className="flex flex-col items-center pb-12 bg-gray-50 customSection"
+      className="flex flex-col items-center pt-12 pb-12 bg-gray-50 customSection"
       id="contact"
     >
       <div>
-        <h1 className="pt-12 pb-10 text-5xl font-bold text-center text-blue-600 md:pb-12 lg:text-7xl md:text-5xl md:pt-0">
+        <h1 className="pb-10 text-5xl font-bold text-center text-blue-600 md:pb-24 lg:text-7xl md:text-5xl md:pt-12">
           Contact
         </h1>
       </div>

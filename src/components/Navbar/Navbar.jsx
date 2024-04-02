@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { Avatar } from "@nextui-org/react";
 import CustomTooltip from "../Common/Tooltip";
 import { myImage } from "../Common/myImage";
+import { HashLink as Link } from "react-router-hash-link";
+
 
 function Navbar() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -56,9 +57,9 @@ function Navbar() {
 
           <div className={`${isMenuOpen ? "flex" : ""}`}>
             <ul className={`lg:flex hidden items-center space-x-16`}>
-              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600">About</li>
-              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600">Projects</li>
-              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600">Contact</li>
+              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600"><Link to="#about">About</Link></li>
+              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600"><Link to="#projects">Projects</Link></li>
+              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600"><Link to="#contact">Contact</Link></li>
               <CustomTooltip title="Hire Me">
                 <button className="btn">Hire Me</button>
               </CustomTooltip>
@@ -69,9 +70,9 @@ function Navbar() {
           {isMenuOpen && (
             <div className={`${isMenuOpen ? "block mt-[90px] w-full top-0 absolute left-0 right-0" : "hidden"}`}>
               <ul className="flex flex-col px-4 py-4 mt-1 space-y-4 shadow-md lg:hidden bg-gray-50 bg-opacity-95 ">
-              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600">About</li>
-              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600">Projects</li>
-              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600">Contact</li>
+              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600"><Link to="#about">About</Link></li>
+              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600"><Link to="#projects">Projects</Link></li>
+              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600"><Link to="#contact">Contact</Link></li>
               <CustomTooltip title="Hire Me">
                 <button className="btn">Hire Me</button>
               </CustomTooltip>
