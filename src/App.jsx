@@ -6,11 +6,14 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer/Footer";
 import Contact from "./components/Contact/Contact";
+import StickyNavbar from "./components/Navbar/StickyNavbar";
+
 
 export default function App() {
   return (
-    <div className="max-h-full">
+    <div>
       <Navbar />
+      {/* <StickyNavbar /> */}
       <Hero />
       <TechStack />
       <About id={"about"} />
