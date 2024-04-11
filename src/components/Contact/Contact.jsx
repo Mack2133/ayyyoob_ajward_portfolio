@@ -45,7 +45,7 @@ function Contact() {
 
   return (
     <div
-      className="flex flex-col items-center pt-12 pb-12 bg-gray-50 customSection"
+      className="flex flex-col items-center pt-12 pb-12 bg-gray-200 customSection"
       id="contact"
     >
       <div>

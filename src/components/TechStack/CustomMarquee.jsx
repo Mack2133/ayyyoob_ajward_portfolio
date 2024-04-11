@@ -7,7 +7,6 @@ const stacks = [
     "tailwindcss",
     "bootstrap5",
     "nodejs",
-    "express",
     "mongodb",
     "mysql",
     "css3",
@@ -37,7 +36,7 @@ function CustomMarquee() {
                 <StackIcon
                     grayscale={false}
                     key={index}
-                    name={stack}
+                    name={stacks[index]}
                     style={{ width: "75px", height: "75px"}}
                 />
             )

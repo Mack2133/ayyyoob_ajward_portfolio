@@ -5,6 +5,7 @@ import About from "./About/About";
 import Projects from "./Projects/Projects";
 import Footer from "./Footer/Footer";
 import Contact from "./Contact/Contact";
+import Skills from "./Skills/Skills";
 
 const exportComponents = {
     Navbar,
@@ -13,7 +14,8 @@ const exportComponents = {
     About,
     Projects,
     Footer,
-    Contact
+    Contact,
+    Skills
 }
 
 export default exportComponents;
