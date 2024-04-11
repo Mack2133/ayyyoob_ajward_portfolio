@@ -9,7 +9,7 @@ function Projects() {
         <h1 className="pt-12 pb-12 text-5xl font-bold text-center text-blue-600 md:pb-24 lg:text-7xl md:text-5xl">
           Projects
         </h1>
-        <div className="z-0 grid grid-cols-1 gap-5 px-10 md:grid-cols-3 sm:grid-cols-2 sm:gap-5 md:px-0">
+        <div className="z-0 grid grid-cols-1 gap-5 px-5 md:grid-cols-3 sm:grid-cols-2 sm:gap-5 md:px-0">
           {projectsData.map((project) => (
             <CustomCard
               key={project.id}
