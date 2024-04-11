@@ -7,7 +7,7 @@ import {Tooltip} from "@nextui-org/react";
 function SkillsBox({ title, stacks, id }) {
   return (
     <>
-      <div className="h-[300px] sm:min-w-96 max-sm:min-w-[340px] bg-transparent ring-1 ring-gray-300 rounded-md overflow-hidden backdrop-blur-md">
+      <div className="h-[300px] sm:min-w-96 max-sm:min-w-[340px] bg-transparent ring-1 ring-gray-300 rounded-md overflow-hidden backdrop-blur-md shadow-md">
         <div className="w-full h-10 bg-gray-900">
           <div className="flex items-center justify-center h-full">
             <h1 className="text-xl text-center text-white">{title}</h1>
