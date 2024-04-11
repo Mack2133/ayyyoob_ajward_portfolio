@@ -30,6 +30,7 @@ function SkillsBox({ title, stacks, id }) {
                         "text-black bg-gradient-to-br from-white to-neutral-200",
                       ],
                     }}
+                    key={stack}
                   >
                     <StackIcon
                       key={id}

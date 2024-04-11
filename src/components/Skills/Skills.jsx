@@ -36,11 +36,11 @@ const skills = [
 
 function Skills() {
   return (
-    <div className="flex flex-col items-center justify-start pt-12 pb-12 bg-gray-100 customSection">
+    <div className="flex flex-col items-center justify-start pt-12 pb-12 bg-gray-100 customSection" id="skills">
       <h1 className="pb-10 text-5xl font-bold text-center text-blue-600 md:pb-24 lg:text-7xl md:text-5xl md:pt-12">
         Skills
       </h1>
-      <div className="grid grid-cols-1 gap-5 lg:grid-cols-3 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-5 lg:grid-cols-3 md:grid-cols-2 max-sm:px-10">
         {skills.map((skill) => {
           return <SkillsBox key={skill.id} title={skill.title} stacks={skill.stack} />;
         })}

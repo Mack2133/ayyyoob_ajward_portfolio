@@ -59,6 +59,7 @@ function Navbar() {
             <ul className={`lg:flex hidden items-center space-x-16`}>
               <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600"><Link to="#about" smooth>About</Link></li>
               <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600"><Link to="#projects" smooth>Projects</Link></li>
+              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600"><Link to="#skills" smooth>Skills</Link></li>
               <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600"><Link to="#contact" smooth>Contact</Link></li>
               <CustomTooltip title="Hire Me">
                 <button className="btn"><Link to="#contact" smooth>Hire Me</Link></button>
@@ -72,6 +73,7 @@ function Navbar() {
               <ul className="flex flex-col px-4 py-4 mt-1 space-y-4 shadow-md lg:hidden bg-gray-50 bg-opacity-95 ">
               <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600"><Link to="#about" smooth>About</Link></li>
               <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600"><Link to="#projects" smooth>Projects</Link></li>
+              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600"><Link to="#skills" smooth>Skills</Link></li>
               <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600"><Link to="#contact" smooth>Contact</Link></li>
               <CustomTooltip title="Hire Me">
                 <button className="btn"><Link to="#contact" smooth>Hire Me</Link></button>
