@@ -57,6 +57,15 @@ const projectsData = [
       repoUrl:"https://github.com/Mack2133/ayyyoob_ajward_portfolio"
 
     },
+    {
+      id: 7,
+      title: "book collection CRUD App",
+      description: "A simple CRUD app for managing a book collection.",
+      image:
+        "https://cdn.pixabay.com/photo/2015/11/08/23/54/girl-1034421_1280.jpg",
+      technologies: ["React", "TailwindCSS", "NodeJS", "MongoDB"],
+      repoUrl:"https://github.com/Mack2133/book-collection"
+    }
   ];
 
   export default projectsData;
