@@ -62,7 +62,7 @@ const projectsData = [
       title: "book collection CRUD App",
       description: "A simple CRUD app for managing a book collection.",
       image:
-        "https://cdn.pixabay.com/photo/2015/11/08/23/54/girl-1034421_1280.jpg",
+        "https://img.freepik.com/free-photo/study-group-learning-library_23-2149215460.jpg?w=1800&t=st=1713251713~exp=1713252313~hmac=2af6a5a0dffc8e26ad62086e21bb404cade495297ee3550ce3ec00b114675743",
       technologies: ["React", "Express js", "NodeJS", "MongoDB"],
       repoUrl:"https://github.com/Mack2133/book-collection"
     }
