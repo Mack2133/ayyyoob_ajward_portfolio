@@ -1,13 +1,32 @@
+import project09_img from "../../../public/img/project-09.png";
+
 const projectsData = [
-    {
-      id: 1,
-      title: "SoulNest",
-      description: "Chatbot application for mental health support.",
-      image:
-        "https://img.freepik.com/free-photo/tattooed-man-texting-social-media-remix_53876-98452.jpg?t=st=1711907737~exp=1711911337~hmac=c4b935cafc9117d62f5a2b283d9bc3468d3cc74267c3ed970e73f681f73e1ac1&w=1800",
-      technologies: ["Flutter", "Django", "MongoDB" , "DialogFlow"],
-      repoUrl:"https://github.com/Team-CURLYBRACES/SoulNest"
-    },
+  {
+    id: 1,
+    title: "SoulNest",
+    description: "Chatbot application for mental health support.",
+    image:
+      "https://img.freepik.com/free-photo/tattooed-man-texting-social-media-remix_53876-98452.jpg?t=st=1711907737~exp=1711911337~hmac=c4b935cafc9117d62f5a2b283d9bc3468d3cc74267c3ed970e73f681f73e1ac1&w=1800",
+    technologies: ["Flutter", "Django", "MongoDB" , "DialogFlow"],
+    repoUrl:"https://github.com/Team-CURLYBRACES/SoulNest"
+  },
+  {
+    id: 7,
+    title: "book collection CRUD App",
+    description: "A simple CRUD app for managing a book collection.",
+    image:
+      "https://img.freepik.com/free-photo/study-group-learning-library_23-2149215460.jpg?w=1800&t=st=1713251713~exp=1713252313~hmac=2af6a5a0dffc8e26ad62086e21bb404cade495297ee3550ce3ec00b114675743",
+    technologies: ["React", "Express js", "NodeJS", "MongoDB"],
+    repoUrl:"https://github.com/Mack2133/book-collection"
+  },
+  {
+    id: 8,
+    title: "Authentication using JWT",
+    description: "A simple authentication system using JWT.",
+    image: project09_img,
+    technologies: ["MERN Stack", "JWT", "Bcrypt"],
+    repoUrl:""
+  },
     {
       id: 2,
       title: "Real Estate Website",
@@ -53,19 +72,10 @@ const projectsData = [
       description: "Portfolio Website for showcasing my work.",
       image:
         "https://img.freepik.com/free-photo/technology-coffee-internet-beverage-cafe-data-concept_53876-23193.jpg?t=st=1711906445~exp=1711910045~hmac=6f9dd52dfefce60e7065fb66b6923f0ddefd5e5f677aaa2422fb158ab81aef3e&w=1800",
-      technologies: ["React", "NextUI", "TailwindCSS"],
+      technologies: ["React", "NextUI", "TailwindCSS", "EmailJS"],
       repoUrl:"https://github.com/Mack2133/ayyyoob_ajward_portfolio"
 
     },
-    {
-      id: 7,
-      title: "book collection CRUD App",
-      description: "A simple CRUD app for managing a book collection.",
-      image:
-        "https://img.freepik.com/free-photo/study-group-learning-library_23-2149215460.jpg?w=1800&t=st=1713251713~exp=1713252313~hmac=2af6a5a0dffc8e26ad62086e21bb404cade495297ee3550ce3ec00b114675743",
-      technologies: ["React", "Express js", "NodeJS", "MongoDB"],
-      repoUrl:"https://github.com/Mack2133/book-collection"
-    }
   ];
 
   export default projectsData;
