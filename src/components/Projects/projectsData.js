@@ -25,7 +25,7 @@ const projectsData = [
     description: "A simple authentication system using JWT.",
     image: project09_img,
     technologies: ["MERN Stack", "JWT", "Bcrypt"],
-    repoUrl:""
+    repoUrl:"https://github.com/Mack2133/JWT-Auth"
   },
     {
       id: 2,
