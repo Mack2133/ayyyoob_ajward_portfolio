@@ -68,7 +68,10 @@ function Contact() {
       </div>
       <div className="w-full border-none rounded-lg bg-none md:border-zinc-800 md:w-[650px] backdrop:blur-md opacity-85 md:border-1 ">
         <form onSubmit={handleSubmit(onSubmit)} >
-          <Toaster />
+          <Toaster 
+          closeButton
+          position="top-right"
+          />
           <div className="mb-4">
             <label
               htmlFor="name"
