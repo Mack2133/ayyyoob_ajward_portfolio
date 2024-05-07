@@ -151,6 +151,7 @@ function Contact() {
           </Button>
         </form>
       </div>
+      <hr className="w-full px-5 mt-5 mb-3 border md:hidden border-zinc-700"/>
       <div className="flex flex-col w-full">
         <SocialMediaIcons />
       </div>

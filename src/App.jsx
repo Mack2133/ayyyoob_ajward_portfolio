@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div>
       <Navbar />
-      <Routes>
+      <Routes >
         <Route path="/" element={<Hero />} />
         <Route path="/contact" element={<Contact />}/>
         <Route path="/projects" element={<Projects />}/>
