@@ -1,8 +1,25 @@
 import { set, useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button"
+import "./Contact.css"
+import SocialMediaIcons from "../Common/SocialMediaIcons";
+import { Toaster, toast } from 'sonner'
 
 function Contact() {
+
+  // const [emailStatus, setEmailStatus] = useState(null);
+
+  // useEffect(() => {
+  //   if (emailStatus === "success") {
+  //     // toast('Email sent successfully')
+  //   }
+
+  //   if (emailStatus === "error") {
+  //     // toast('Error sending email')
+  //   }
+  // }, [emailStatus]);
+
   const {
     register,
     handleSubmit,
@@ -17,9 +34,8 @@ function Contact() {
     },
   });
 
-  const [emailStatus, setEmailStatus] = useState(null);
-
   const onSubmit = async (data) => {
+
     const serviceId = "service_4g9e03l";
     const templateId = "template_bijdsdj";
     const publicKey = "kFg-904JjLdAhpCr8";
@@ -41,36 +57,22 @@ function Contact() {
       setEmailStatus("error");
       console.error("Error sending email:", error);
     }
+    
   };
 
+
   return (
-    <div
-      className="flex flex-col items-center pt-12 pb-12 bg-gray-200 customSection"
-      id="contact"
-    >
-      <div>
-        <h1 className="pb-10 text-5xl font-bold text-center text-blue-600 md:pb-24 lg:text-7xl md:text-5xl md:pt-12">
-          Contact
-        </h1>
+    <div className="flex flex-col items-center pt-12 lg:pb-6 max-sm:px-5" >
+      <div className="self-start pb-6 max-sm:pb-2">
+        <h1 className="text-3xl font-bold text-zinc-100">Contact Me </h1>
       </div>
-      <div className="w-full p-10 px-10 border-none rounded-lg md:bg-gray-100 bg-none md:border-gray-300 md:w-3/5 backdrop:blur-md opacity-85 md:border-1">
-        <div className={emailStatus === "success" || emailStatus === "error" ? "py-5" : "hidden"}>
-          {emailStatus === "success" && (
-            <p className="text-2xl font-bold text-green-500">
-              Email sent successfully!
-            </p>
-          )}
-          {emailStatus === "error" && (
-            <p className="text-2xl font-bold text-red-500">
-              Error sending email. Please try again later.
-            </p>
-          )}
-        </div>
-        <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="w-full border-none rounded-lg bg-none md:border-zinc-800 md:w-[650px] backdrop:blur-md opacity-85 md:border-1 ">
+        <form onSubmit={handleSubmit(onSubmit)} >
+          <Toaster />
           <div className="mb-4">
             <label
               htmlFor="name"
-              className="block mb-2 text-lg font-medium text-gray-700"
+              className="block mb-2 text-lg font-medium text-zinc-400"
             >
               Name
             </label>
@@ -78,14 +80,14 @@ function Contact() {
               type="text"
               id="name"
               name="name"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-4 py-2 border rounded-md border-zinc-600 bg-zinc-800 focus:outline-none focus:ring-zinc-500 focus:border-zinc-500"
               {...register("name", { required: true })}
             />
           </div>
           <div className="mb-4">
             <label
               htmlFor="email"
-              className="block mb-2 text-lg font-medium text-gray-700"
+              className="block mb-2 text-lg font-medium text-zinc-400"
             >
               Email
             </label>
@@ -93,7 +95,7 @@ function Contact() {
               type="email"
               id="email"
               name="email"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-4 py-2 border rounded-md border-zinc-600 bg-zinc-800 focus:outline-none focus:ring-zinc-500 focus:border-zinc-500"
               {...register("email", {
                 required: true,
                 pattern: /^\S+@\S+\.\S+$/i,
@@ -106,7 +108,7 @@ function Contact() {
           <div className="mb-4">
             <label
               htmlFor="phone"
-              className="block mb-2 text-lg font-medium text-gray-700"
+              className="block mb-2 text-lg font-medium text-zinc-400"
             >
               Phone
             </label>
@@ -114,7 +116,7 @@ function Contact() {
               type="tel"
               id="phone"
               name="phone"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-4 py-2 border rounded-md autofill:bg-zinc-800 border-zinc-600 bg-zinc-800 focus:outline-none focus:ring-zinc-500 focus:border-zinc-500"
               {...register("phone", {
                 required: true,
                 pattern: /^(?:0|\d{10})$/,
@@ -127,26 +129,30 @@ function Contact() {
           <div className="mb-4">
             <label
               htmlFor="message"
-              className="block mb-2 text-lg font-medium text-gray-700"
+              className="block mb-2 text-lg font-medium text-zinc-400"
             >
               Message
             </label>
             <textarea
               id="message"
               name="message"
-              rows="4"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              rows="8"
+              className="w-full px-4 py-2 border rounded-md border-zinc-600 bg-zinc-800 autofill:bg-zinc-800 focus:outline-none focus:ring-zinc-500 focus:border-zinc-500"
               {...register("message")}
             ></textarea>
           </div>
-          <button
+          <Button
             disabled={isSubmitting}
             type="submit"
-            className="px-6 py-3 text-lg font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700"
+            className="w-full px-5"
+            // className="w-full py-2 text-lg font-medium text-white border rounded-md border-zinc-600 bg-zinc-800/70 hover:bg-zinc-800/90"
           >
             {isSubmitting ? "Submitting..." : "Submit"}
-          </button>
+          </Button>
         </form>
+      </div>
+      <div className="flex flex-col w-full">
+        <SocialMediaIcons />
       </div>
     </div>
   );

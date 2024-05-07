@@ -1,51 +1,46 @@
-import React from "react";
-import SkillsBox from "./SkillsBox";
-
-const skills = [
-  {
-    id: 1,
-    title: "Frontend",
-    stack: ["reactjs", "nextjs", "typescript", "tailwindcss", "bootstrap5", "flutter","html5", "css3"]
-  },
-  {
-    id: 2,
-    title: "Backend",
-    stack: ["nodejs", "django"]
-  },
-  {
-    id: 3,
-    title:"Languages",
-    stack:["java","js","python","dart"]
-  },
-  {
-    id: 4,
-    title:"DevOps",
-    stack:["git","vscode","postman","npm2"]
-  },
-  {
-    id: 5,
-    title: "Database",
-    stack: ["mongodb", "mysql"]
-  },
-  {
-    id: 6,
-    title: "Others",
-    stack: ["ps","ai","jira","figma"]
-  }
-];
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 
 function Skills() {
   return (
-    <div className="flex flex-col items-center justify-start pt-12 pb-12 bg-gray-100 customSection" id="skills">
-      <h1 className="pb-10 text-5xl font-bold text-center text-blue-600 md:pb-24 lg:text-7xl md:text-5xl md:pt-12">
-        Skills
-      </h1>
-      <div className="grid grid-cols-1 gap-5 lg:grid-cols-3 md:grid-cols-2 max-sm:px-5">
-        {skills.map((skill) => {
-          return <SkillsBox key={skill.id} title={skill.title} stacks={skill.stack} />;
-        })}
+    <div  className="flex flex-col items-center pt-4 pb-8 md:pt-12 max-sm:px-5">
+      <div className="self-start">
+        <h1 className="text-3xl font-bold text-zinc-100">Skills</h1>
+        <p className="pt-2 text-lg font-medium leading-7 text-zinc-400">I have worked on a variety of projects over the years some of them as a hobby, some as a proof of concept and others to solve my own pain points. Here are some of the projects that I have worked on.</p>
       </div>
-
+      <Card className="w-full mt-5 bg-zinc-800">
+    <CardHeader>
+      <CardTitle className="flex items-start justify-between gap-2 max-sm:text-xl">
+        frontend
+      </CardTitle>
+    </CardHeader>
+    <CardContent>
+      <div className="grid gap-2">
+        <div
+          alt="Soul Nest"
+          className="object-cover w-full rounded-md aspect-square bg-zinc-700 lg:max-h-[300px] md:max-h-[250px] sm:max-h-[200px]"
+          height="200"
+          src="images/soul-nest.png"
+          width="200"
+        />
+      </div>
+    </CardContent>
+    {/* <CardFooter>
+      <Button className="w-full"
+      >
+        <img src="https://cdn.hugeicons.com/icons/github-stroke-rounded.svg" alt="github" width="20" height="20" />
+        <span className="ml-2">View on Github</span>
+      </Button>
+    </CardFooter> */}
+  </Card>    
     </div>
   );
 }

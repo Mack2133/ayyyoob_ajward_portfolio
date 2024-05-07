@@ -1,27 +1,70 @@
-import CustomCard from "../Common/CustomCard";
-import  projectsData  from "./projectsData";
+import ProjectCard from "./ProjectCard";
 
+const projectDatas = [
+  {
+    title: "SoulNest",
+    description: "Chatbot application for mental health support. ",
+    projectType: "Group",
+    technologies: ["MERN Stack", "JWT", "Bcrypt"],
+    repo: "https://github.com/Team-CURLYBRACES/SoulNest"
+  },
+  {
+    title: "book collection CRUD App",
+    description: "A simple CRUD app for managing a book collection. ",
+    projectType: "Individual",
+    technologies: ["React", "Bootstrap"],
+    repo: "https://github.com/Team-CURLYBRACES/SoulNest"
+  },
+  {
+    title: "Authentication using JWT",
+    description: "A simple authentication system using JWT.",
+    projectType: "Individual",
+    technologies: ["Java", "OOP",],
+    repo: "https://github.com/Team-CURLYBRACES/SoulNest"
+  },
+  {
+    title: "Real Estate Website",
+    description: "Property selling / renting Website.",
+    technologies: ["Python"],
+    repo: "https://github.com/Team-CURLYBRACES/SoulNest"
+  },
+  {
+    title: "Student Grading System",
+    description: "Student Grading System for Schools.",
+    technologies: ["React", "TailwindCSS", "Figma"],
+    repo: "https://github.com/Team-CURLYBRACES/SoulNest"
+  },
+  {
+    title: "Food Queue Management System",
+    description: "Food Queue Management System for a small business.",
+    technologies: ["React", "TailwindCSS", "Figma"],
+    repo: "https://github.com/Team-CURLYBRACES/SoulNest"
+  },
+  {
+    title: "Personal Portfolio Website",
+    description: "Portfolio Website for showcasing my work.",
+    technologies: ["React", "NextUI", "TailwindCSS", "EmailJS"],
+    repo: "https://github.com/Team-CURLYBRACES/SoulNest"
+  }
+]
 
 function Projects() {
   return (
-    <div className="flex flex-col items-center justify-start pb-24 bg-gray-200 customSection md:pt-12" id="projects">
-      <div>
-        <h1 className="pt-12 pb-12 text-5xl font-bold text-center text-blue-600 md:pb-24 lg:text-7xl md:text-5xl">
-          Projects
-        </h1>
-        <div className="z-0 grid grid-cols-1 gap-5 px-5 md:grid-cols-3 sm:grid-cols-2 sm:gap-5 md:px-0">
-          {projectsData.map((project) => (
-            <CustomCard
-              key={project.id}
-              title1={project.title}
-              description={project.description}
-              image={project.image}
-              technologies={project.technologies}
-              repoUrl={project.repoUrl}
-            />
-          ))}
-        </div>
+    <div  className="flex flex-col items-center pt-4 pb-8 md:pt-12 max-sm:px-5">
+      <div className="self-start">
+        <h1 className="text-3xl font-bold text-zinc-100">Projects</h1>
+        <p className="pt-2 text-lg font-medium leading-7 text-zinc-400">I have worked on a variety of projects over the years some of them as a hobby, some as a proof of concept and others to solve my own pain points. Here are some of the projects that I have worked on.</p>
       </div>
+      <div className="w-full py-3">
+        {projectDatas.map((projectData, index) => (
+          <ProjectCard key={index} 
+          title={projectData.title} 
+          description={projectData.description} 
+          projectType={projectData.projectType} 
+          technologies={projectData.technologies} 
+          repo={projectData.repo}/>
+        ))}
+      </div>      
     </div>
   );
 }

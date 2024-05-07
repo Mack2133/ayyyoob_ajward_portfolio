@@ -1,92 +1,118 @@
-import React, { useState } from "react";
-import { Avatar } from "@nextui-org/react";
-import CustomTooltip from "../Common/Tooltip";
 import { myImage } from "../Common/myImage";
-import { HashLink as Link } from "react-router-hash-link";
+import {
+  Menu,
+  Search,
+} from "lucide-react";
+// import { HashLink as Link } from "react-router-hash-link";
+import { NavLink } from "react-router-dom";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import 'primeicons/primeicons.css';
 
 
-function Navbar() {
-  const [isMenuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
-  };
-
+export default function Dashboard() {
   return (
-    <div className="">
-      <nav className=" shadow-sm border-b-1.5 bg-gray-50 bg-opacity-85 backdrop-blur-md h-[90px]">
-      <div className="container flex items-center justify-between h-full px-10 mx-auto lg:px-20">
-        <CustomTooltip title={"Ayyoob Ajward"}>
-          <Avatar
-            isBordered
-            color="primary"
-            src={myImage}
-            size="xl"
-            className="cursor-pointer"
-          />
-        </CustomTooltip>
-
-        <div className="flex items-center">
-          <button onClick={toggleMenu} className="focus:outline-none lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-8 h-8 text-black cursor-pointer"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              {isMenuOpen ? (
-                <path
-                  className="transition-all duration-300 delay-150"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  className="transition-all duration-300 delay-150"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
-          </button>
-
-          <div className={`${isMenuOpen ? "flex" : ""}`}>
-            <ul className={`lg:flex hidden items-center space-x-16`}>
-              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600"><Link to="#about" smooth>About</Link></li>
-              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600"><Link to="#projects" smooth>Projects</Link></li>
-              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600"><Link to="#skills" smooth>Skills</Link></li>
-              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600"><Link to="#contact" smooth>Contact</Link></li>
-              <CustomTooltip title="Hire Me">
-                <button className="btn"><Link to="#contact" smooth>Hire Me</Link></button>
-              </CustomTooltip>
-            </ul>
-
-
-            {/* Navigation bar for small screens */}
-          {isMenuOpen && (
-            <div className={`${isMenuOpen ? "block mt-[90px] w-full top-0 absolute left-0 right-0" : "hidden"}`}>
-              <ul className="flex flex-col px-4 py-4 mt-1 space-y-4 shadow-md lg:hidden bg-gray-50 bg-opacity-95 ">
-              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600"><Link to="#about" smooth>About</Link></li>
-              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600"><Link to="#projects" smooth>Projects</Link></li>
-              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600"><Link to="#skills" smooth>Skills</Link></li>
-              <li className="text-lg font-medium text-black transition-colors delay-100 cursor-pointer hover:text-blue-600"><Link to="#contact" smooth>Contact</Link></li>
-              <CustomTooltip title="Hire Me">
-                <button className="btn"><Link to="#contact" smooth>Hire Me</Link></button>
-              </CustomTooltip>
-            </ul>
+    <div className="flex justify-center max-sm:px-5">
+      <header className="sticky top-0 flex md:w-[650px] w-full items-center h-14 gap-4 px-4 mt-5 border-b rounded-full border-zinc-700/50 bg-zinc-800/40 sm:px-12 md:px-6 mx-auto">
+        <div className="flex items-center w-full gap-4 md:ml-auto md:gap-2 lg:gap-4">
+            {/* <Avatar className="">
+                <AvatarImage src={myImage} />
+                <AvatarFallback>AB</AvatarFallback>
+            </Avatar> */}
+            <NavLink
+            to="/"
+            
+            className="transition-colors text-zinc-400 hover:text-foreground"
+          >
+            <div className="flex items-center gap-2">
+              <i className="pi pi-home"></i>
+              <h1 className="hidden md:block">Home</h1>
             </div>
-          )}
-          </div>
+          </NavLink>
         </div>
-      </div>
-    </nav>
+        <nav className="flex-col hidden gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
+          {/* <NavLink
+            to="/about" 
+            
+            className="transition-colors text-zinc-400 hover:text-foreground"
+          >
+            <div className="flex items-center gap-2">
+              <i className="pi pi-user"></i>
+              <h1>About</h1>
+            </div>
+          </NavLink> */}
+          <NavLink
+            to="/projects" 
+            
+            className="transition-colors text-zinc-400 hover:text-foreground"
+          >
+            <div className="flex items-center gap-2">
+              <i className="pi pi-folder"></i>
+              <h1>Projects</h1>
+            </div>
+          </NavLink>
+          <NavLink
+            to="/skills" 
+            
+            className="transition-colors text-zinc-400 hover:text-foreground"
+          >
+            <div className="flex items-center gap-2">
+              <i className="pi pi-star-fill"></i>
+              <h1>Skills</h1>
+            </div>
+          </NavLink>
+          <NavLink
+            to="/contact" 
+            
+            className="transition-colors text-zinc-400 hover:text-foreground"
+          >
+           <div className="flex items-center gap-2">
+              <i className="pi pi-envelope"></i>
+              <h1>Contact</h1>
+            </div>
+          </NavLink>
+        </nav>
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button
+              variant="outline"
+              size="icon"
+              className="transition duration-150 ease-in bg-transparent shrink-0 md:hidden hover:bg-zinc-700"
+            >
+              <Menu className="w-5 h-5" />
+              <span className="sr-only">Toggle navigation menu</span>
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="right" className="bg-zinc-800">
+            <nav className="grid gap-6 text-lg font-medium">
+              {/* <NavLink 
+                to="/about"  
+                className="hover:text-foreground">
+                About
+              </NavLink> */}
+              <NavLink
+                to="/skills" 
+                className="text-zinc-400 hover:text-foreground"
+              >
+                Skills
+              </NavLink>
+              <NavLink
+                to="/projects" 
+                className="text-zinc-400 hover:text-foreground"
+              >
+                Project
+              </NavLink>
+              <NavLink
+                to="/contact" 
+                className="text-zinc-400 hover:text-foreground"
+              >
+                Contact
+              </NavLink>
+            </nav>
+          </SheetContent>
+        </Sheet>
+      </header>
     </div>
   );
 }
-
-export default Navbar;
