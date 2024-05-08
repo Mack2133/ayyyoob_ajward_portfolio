@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/card"
 
 
-const SkillsCard = ({title, techStack}) => {
+const SkillsCard = ({title, techStack, description}) => {
   return (
     <Card className="w-full mt-5 bg-zinc-800">
     <CardHeader>
@@ -26,29 +26,24 @@ const SkillsCard = ({title, techStack}) => {
         >
             {techStack.map((icon, index) => {
                 return (
-                    <img
-                    key={index}
-                    src={icon}
-                    // className="w-1/4 p-2 md:w-1/4 md:h-1/4 xl:w-1/3 xl:h-1/3 h-1/4"
-                    className="w-1/4 p-2 md:w-1/4 md:h-1/4 xl:w-1/3 xl:h-1/3 h-1/4"
-                    />
+                    // <div className="">
+                        <img
+                        key={index}
+                        src={icon}
+                        // className="w-1/4 p-2 md:w-1/4 md:h-1/4 xl:w-1/3 xl:h-1/3 h-1/4"
+                        className="w-1/4 p-2 md:w-1/4 md:h-1/4 xl:w-1/3 xl:h-1/3 h-1/4"
+                        />
+                    // </div>
                 )
             })}
         </div>
         <CardDescription>
           <p className="text-base text-zinc-400">
-            I have worked on a variety of projects over the years some of them as a hobby, some as a proof of concept and others to solve my own pain points. Here are some of the projects that I have worked on.
+            {description}
           </p>
         </CardDescription>
       </div>
     </CardContent>
-    {/* <CardFooter>
-      <Button className="w-full"
-      >
-        <img src="https://cdn.hugeicons.com/icons/github-stroke-rounded.svg" alt="github" width="20" height="20" />
-        <span className="ml-2">View on Github</span>
-      </Button>
-    </CardFooter> */}
   </Card>    
   )
 }

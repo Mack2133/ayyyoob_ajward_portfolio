@@ -17,8 +17,19 @@ import flutter from './flutter.svg';
 import dart from './dart.svg';
 import reactnative from './react-native.svg';
 import java from './java.svg';
+import photoshop from './photoshop.svg';
+import illustrator from './illustrator.svg';
+import figma from './figma.svg';
+import googleAds from './google-ads.svg';
+import facebook from './facebook.svg';
+
 
 export {
+    facebook,
+    googleAds,
+    figma,
+    illustrator,
+    photoshop,
     java,
     css3,
     html5,
