@@ -21,22 +21,22 @@ function Skills() {
       <SkillsCard 
         title={"Mobile Development"}
         techStack={[flutter, dart, reactnative]}
-        description={"I have worked on variety of projects in mobile developement. I have worked on a variety of projects over the years some of them as a hobby, some as a proof of concept and others to solve my own pain points. Here are some of the projects that I have worked on."}
+        description={"I have to solve my own pain points. Here are some of the projects that I have worked on."}
       />
       <SkillsCard 
         title={"DevOps"}
         techStack={[git, vercel]}
-        description={"I have worked on variety of projects in DevOps. I have worked on a variety of projects over the years some of them as a hobby, some as a proof of concept and others to solve my own pain points. Here are some of the projects that I have worked on."}
+        description={"I have worked on Here are some of the projects that I have worked on."}
       />
       <SkillsCard 
         title={"Digital Marketing"}
         techStack={[googleAds, facebook]}
-        description={"I have worked on variety of projects in Digital Marketing. I have worked on a variety of projects over the years some of them as a hobby, some as a proof of concept and others to solve my own pain points. Here are some of the projects that I have worked on."}
+        description={"I have worked on variety of projects in Digital Marketing. Here are some of the projects that I have worked on."}
       />
       <SkillsCard 
         title={"Graphic Design"}
         techStack={[photoshop, illustrator]}
-        description={"I have worked on variety of projects in Graphic Design. I have worked on a variety of projects over the years some of them as a hobby, some as a proof of concept and others to solve my own pain points. Here are some of the projects that I have worked on."}
+        description={"I have worked on variety of projects in Graphic Design. I have worked on a variety of projects over the years some of them as a hobby."}
       />
     </div>
   );
