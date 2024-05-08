@@ -1,4 +1,5 @@
 import SkillsCard from "./SkillsCard";
+import { html5, css3, dart, django, express, flutter, git, javascript, java, jwtio, mongodb, nextjs, nodejs, python, reactnative, react, tailwindcss, typescript, vercel } from "./icons/icons_export";
 
 function Skills() {
   return (
@@ -9,15 +10,27 @@ function Skills() {
       </div>
       <SkillsCard 
         title={"Frontend"}
+        techStack={[html5, css3, javascript, react, tailwindcss, typescript, flutter, dart, reactnative, nextjs]}
       />
       <SkillsCard 
         title={"Backend"}
+        techStack={[java, python, nodejs, express, django, mongodb, jwtio]}
       />
       <SkillsCard 
         title={"Mobile Development"}
+        techStack={[flutter, dart, reactnative]}
       />
       <SkillsCard 
         title={"DevOps"}
+        techStack={[git, vercel]}
+      />
+      <SkillsCard 
+        title={"Digital Marketing"}
+        techStack={[html5, css3]}
+      />
+      <SkillsCard 
+        title={"Graphic Design"}
+        techStack={[html5, css3]}
       />
     </div>
   );

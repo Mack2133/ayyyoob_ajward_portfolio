@@ -91,17 +91,18 @@ export default function Dashboard() {
                 className="hover:text-foreground">
                 About
               </NavLink> */}
-              <NavLink
-                to="/skills" 
-                className="text-zinc-400 hover:text-foreground"
-              >
-                Skills
-              </NavLink>
+              
               <NavLink
                 to="/projects" 
                 className="text-zinc-400 hover:text-foreground"
               >
                 Project
+              </NavLink>
+              <NavLink
+                to="/skills" 
+                className="text-zinc-400 hover:text-foreground"
+              >
+                Skills
               </NavLink>
               <NavLink
                 to="/contact" 
