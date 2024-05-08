@@ -13,7 +13,7 @@ export default function App() {
   return (
     <div>
       <Toaster 
-      closeButton
+      // closeButton
       position="top-right"
       />
       <Navbar />

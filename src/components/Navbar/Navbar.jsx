@@ -78,7 +78,7 @@ export default function Dashboard() {
             <Button
               variant="outline"
               size="icon"
-              className="transition duration-150 ease-in bg-transparent shrink-0 md:hidden hover:bg-zinc-700"
+              className="transition ease-in bg-transparent duration-50 shrink-0 md:hidden hover:bg-zinc-700"
             >
               <Menu className="w-5 h-5" />
               <span className="sr-only">Toggle navigation menu</span>

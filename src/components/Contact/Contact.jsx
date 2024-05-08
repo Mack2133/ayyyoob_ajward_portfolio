@@ -8,17 +8,17 @@ import { Toaster, toast } from 'sonner'
 
 function Contact() {
 
-  // const [emailStatus, setEmailStatus] = useState(null);
+  const [emailStatus, setEmailStatus] = useState(null);
 
-  // useEffect(() => {
-  //   if (emailStatus === "success") {
-  //     // toast('Email sent successfully')
-  //   }
+  useEffect(() => {
+    if (emailStatus === "success") {
+      toast.success('Email sent successfully')
+    }
 
-  //   if (emailStatus === "error") {
-  //     // toast('Error sending email')
-  //   }
-  // }, [emailStatus]);
+    if (emailStatus === "error") {
+      toast.error('Error sending email')
+    }
+  }, [emailStatus]);
 
   const {
     register,
@@ -69,7 +69,6 @@ function Contact() {
       <div className="w-full border-none rounded-lg bg-none md:border-zinc-800 md:w-[650px] backdrop:blur-md opacity-85 md:border-1 ">
         <form onSubmit={handleSubmit(onSubmit)} >
           <Toaster 
-          closeButton
           position="top-right"
           />
           <div className="mb-4">
@@ -83,7 +82,7 @@ function Contact() {
               type="text"
               id="name"
               name="name"
-              className="w-full px-4 py-2 border rounded-md border-zinc-600 bg-zinc-800 focus:outline-none focus:ring-zinc-500 focus:border-zinc-500"
+              className="w-full px-4 py-2 border rounded-md bg-zinc-800 focus:outline-none focus:ring-zinc-700 focus:border-zinc-700"
               {...register("name", { required: true })}
             />
           </div>
@@ -98,14 +97,14 @@ function Contact() {
               type="email"
               id="email"
               name="email"
-              className="w-full px-4 py-2 border rounded-md border-zinc-600 bg-zinc-800 focus:outline-none focus:ring-zinc-500 focus:border-zinc-500"
+              className="w-full px-4 py-2 border rounded-md bg-zinc-800 focus:outline-none focus:ring-zinc-700 focus:border-zinc-700"
               {...register("email", {
                 required: true,
                 pattern: /^\S+@\S+\.\S+$/i,
               })}
             />
             {errors.email && (
-              <p className="text-red-500">Please enter a valid email address</p>
+              <p className="text-red-400">Please enter a valid email address</p>
             )}
           </div>
           <div className="mb-4">
@@ -119,14 +118,14 @@ function Contact() {
               type="tel"
               id="phone"
               name="phone"
-              className="w-full px-4 py-2 border rounded-md autofill:bg-zinc-800 border-zinc-600 bg-zinc-800 focus:outline-none focus:ring-zinc-500 focus:border-zinc-500"
+              className="w-full px-4 py-2 border rounded-md autofill:bg-zinc-800 bg-zinc-800 focus:outline-none focus:ring-zinc-700 focus:border-zinc-700"
               {...register("phone", {
                 required: true,
                 pattern: /^(?:0|\d{10})$/,
               })}
             />
             {errors.phone && (
-              <p className="text-red-500 ">Please enter a valid phone number</p>
+              <p className="text-red-400 ">Please enter a valid phone number</p>
             )}
           </div>
           <div className="mb-4">
@@ -140,7 +139,7 @@ function Contact() {
               id="message"
               name="message"
               rows="8"
-              className="w-full px-4 py-2 border rounded-md border-zinc-600 bg-zinc-800 autofill:bg-zinc-800 focus:outline-none focus:ring-zinc-500 focus:border-zinc-500"
+              className="w-full px-4 py-2 border rounded-md bg-zinc-800 autofill:bg-zinc-800 focus:outline-none focus:ring-zinc-700 focus:border-zinc-700"
               {...register("message")}
             ></textarea>
           </div>
@@ -148,7 +147,7 @@ function Contact() {
             disabled={isSubmitting}
             type="submit"
             className="w-full px-5"
-            // className="w-full py-2 text-lg font-medium text-white border rounded-md border-zinc-600 bg-zinc-800/70 hover:bg-zinc-800/90"
+            // className="w-full py-2 text-lg font-medium text-white border rounded-md bg-zinc-800/70 hover:bg-zinc-800/90"
           >
             {isSubmitting ? "Submitting..." : "Submit"}
           </Button>
