@@ -1,5 +1,5 @@
 import SkillsCard from "./SkillsCard";
-import { html5, css3, dart, django, express, flutter, git, javascript, java, jwtio, mongodb, nextjs, nodejs, python, reactnative, react, tailwindcss, typescript, vercel,photoshop, illustrator, googleAds, figma, facebook } from "./icons/icons_export";
+import { html5, css3, dart, django, express, premierPro, flutter, git, javascript, java, jwtio, mongodb, nextjs, nodejs, python, reactnative, react, tailwindcss, typescript, vercel,photoshop, illustrator, googleAds, figma, facebook } from "./icons/icons_export";
 
 function Skills() {
   return (
@@ -35,7 +35,7 @@ function Skills() {
       />
       <SkillsCard 
         title={"Graphic Design"}
-        techStack={[photoshop, illustrator]}
+        techStack={[photoshop, illustrator, premierPro]}
         description={"I have worked on variety of projects in Graphic Design. I have worked on a variety of projects over the years some of them as a hobby."}
       />
     </div>

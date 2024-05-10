@@ -6,11 +6,36 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { motion } from "framer-motion"
+
+const fadeAnimationVariants = {
+  initial: {
+    opacity: 0,
+    y:100
+  },
+  animate: {
+    opacity: 1,
+    y:0,
+    transition: {
+      duration: 0.4,
+      delay: 0.10
+    },
+  }
+}
 
 
 const SkillsCard = ({title, techStack, description}) => {
   return (
-    <Card className="w-full mt-5 bg-zinc-800">
+    <motion.div
+    variants={fadeAnimationVariants}
+    initial="initial"
+    whileInView="animate"
+    className="w-full"
+    viewport={
+      {once: true}
+    }
+    >
+      <Card className="w-full mt-5 bg-zinc-800">
     <CardHeader>
       <CardTitle className="flex items-start justify-between gap-2 max-sm:text-xl">
         {title}
@@ -27,15 +52,11 @@ const SkillsCard = ({title, techStack, description}) => {
         >
             {techStack.map((icon, index) => {
                 return (
-                    // <div className="">
-                        <img
-                        key={index}
-                        src={icon}
-                        // className="w-1/4 p-2 md:w-1/4 md:h-1/4 xl:w-1/3 xl:h-1/3 h-1/4"
-                        // className="w-1/4 p-2 md:w-1/4 md:h-1/4 xl:w-1/3 xl:h-1/3 h-1/4"
-                        className="w-18 h-18"
-                        />
-                    // </div>
+                      <img
+                      key={index}
+                      src={icon}
+                      className="sm:w-12 sm:h-12 "
+                      />
                 )
             })}
         </div>
@@ -46,7 +67,8 @@ const SkillsCard = ({title, techStack, description}) => {
         </CardDescription>
       </div>
     </CardContent>
-  </Card>    
+  </Card>
+    </motion.div>    
   )
 }
 

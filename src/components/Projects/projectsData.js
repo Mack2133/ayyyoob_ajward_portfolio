@@ -1,81 +1,60 @@
-import project09_img from "../../../public/img/project-09.png";
-
-const projectsData = [
+const projectDatas = [
   {
-    id: 1,
     title: "SoulNest",
-    description: "Chatbot application for mental health support.",
-    image:
-      "https://img.freepik.com/free-photo/tattooed-man-texting-social-media-remix_53876-98452.jpg?t=st=1711907737~exp=1711911337~hmac=c4b935cafc9117d62f5a2b283d9bc3468d3cc74267c3ed970e73f681f73e1ac1&w=1800",
-    technologies: ["Flutter", "Django", "MongoDB" , "DialogFlow"],
-    repoUrl:"https://github.com/Team-CURLYBRACES/SoulNest"
+    description: "Chatbot application for mental health patients for get therapy recomendations and to book appointments with therapists.",
+    projectType: "Group",
+    technologies: ["Flutter", "Django", "MongoDB","DialogFLow" , "Flask", "Jupyter Notebook", "Docker"],
+    repo: "https://github.com/Team-CURLYBRACES/SoulNest",
+    image:"public/img/Counselor_Page.png"
   },
   {
-    id: 7,
-    title: "book collection CRUD App",
-    description: "A simple CRUD app for managing a book collection.",
-    image:
-      "https://img.freepik.com/free-photo/study-group-learning-library_23-2149215460.jpg?w=1800&t=st=1713251713~exp=1713252313~hmac=2af6a5a0dffc8e26ad62086e21bb404cade495297ee3550ce3ec00b114675743",
-    technologies: ["React", "Express js", "NodeJS", "MongoDB"],
-    repoUrl:"https://github.com/Mack2133/book-collection"
+    title: "Book collection CRUD App",
+    description: "A simple CRUD app for managing a book collection. ",
+    projectType: "Personal",
+    technologies: ["React js", "TailwindCSS", "MongoDB","Node js","Express js"],
+    repo: "https://github.com/Team-CURLYBRACES/SoulNest",
+    image:""
   },
   {
-    id: 8,
     title: "Authentication using JWT",
     description: "A simple authentication system using JWT.",
-    image: project09_img,
-    technologies: ["MERN Stack", "JWT", "Bcrypt"],
-    repoUrl:"https://github.com/Mack2133/JWT-Auth"
+    projectType: "Personal",
+    technologies: ["React js", "TailwindCSS","Shadcnui","MongoDB","Node js","Express js"],
+    repo: "https://github.com/Team-CURLYBRACES/SoulNest",
+    image:""
   },
-    {
-      id: 2,
-      title: "Real Estate Website",
-      description: "Property selling / renting Website.",
-      image:
-        "https://img.freepik.com/free-photo/hand-presenting-model-house-home-loan-campaign_53876-104970.jpg?t=st=1711905928~exp=1711909528~hmac=926a24590670c181ba17338ed50da08ca8858c9f0b933901cc5c35974491e35b&w=1800",
-      technologies: ["React", "Bootstrap"],
-      repoUrl:"https://github.com/Mack2133/Real-Estate-React-Website"
-    },
-    {
-      id: 3,
-      title: "Food Queue Management System",
-      description: "Food Queue Management System for a small business.",
-      image:
-            "https://img.freepik.com/free-photo/cashier_53876-42752.jpg?t=st=1711905183~exp=1711908783~hmac=8cb9f1fc260600eb91ac44c9aed6144d178e8223c735600b66c422f060edeef7&w=1800",
-      technologies: ["Java", "OOP",],
-      repoUrl:"https://github.com/Mack2133/Shopping-Cart-Management-System-with-GUI-Java-Swing/tree/master"
+  {
+    title: "Real Estate Website",
+    description: "Property selling / renting Website.",
+    projectType: "individual",
+    technologies: ["React js","Boostrap","React Widgets"],
+    repo: "https://github.com/Team-CURLYBRACES/SoulNest",
+    image:""
+  },
+  {
+    title: "Student Grading System",
+    description: "Student Grading System for Schools.",
+    projectType: "individual",
+    technologies: ["Python"],
+    repo: "https://github.com/Team-CURLYBRACES/SoulNest",
+    image:""
+  },
+  {
+    title: "Food Queue Management System",
+    description: "Food Queue Management System for a small business.",
+    technologies: ["Java","OOP"],
+    projectType: "individual",
+    repo: "https://github.com/Team-CURLYBRACES/SoulNest",
+    image:""
+  },
+  {
+    title: "Personal Portfolio Website",
+    description: "Portfolio Website for showcasing my work.",
+    projectType: "Personal",
+    technologies: ["React js", "Shadcnui", "TailwindCSS", "EmailJS"],
+    repo: "https://github.com/Team-CURLYBRACES/SoulNest",
+    image:""
+  }
+]
 
-    },
-    {
-      id: 4,
-      title: "Student Grading System",
-      description: "Student Grading System for Schools.",
-      image:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      technologies: ["Python"],
-      repoUrl:"https://github.com/Mack2133/Student-Grading-System"
-
-    },
-    {
-      id: 5,
-      title: "Taxi Service Landing Page",
-      description: "Taxi Service Landing Page for a Taxi Company.",
-      image:
-        "https://img.freepik.com/free-photo/yellow-black-sign-taxi-placed-top-car-night_181624-10624.jpg?t=st=1711906388~exp=1711909988~hmac=a5c0705b8ca1f2c06505d66ef8340f20e9b088429d7cc647df83e590c2bb8f38&w=1800",
-      technologies: ["React", "TailwindCSS", "Figma"],
-      repoUrl:"https://github.com/Mack2133/Taxi_Service_Website"
-
-    },
-    {
-      id: 6,
-      title: "Personal Portfolio Website",
-      description: "Portfolio Website for showcasing my work.",
-      image:
-        "https://img.freepik.com/free-photo/technology-coffee-internet-beverage-cafe-data-concept_53876-23193.jpg?t=st=1711906445~exp=1711910045~hmac=6f9dd52dfefce60e7065fb66b6923f0ddefd5e5f677aaa2422fb158ab81aef3e&w=1800",
-      technologies: ["React", "NextUI", "TailwindCSS", "EmailJS"],
-      repoUrl:"https://github.com/Mack2133/ayyyoob_ajward_portfolio"
-
-    },
-  ];
-
-  export default projectsData;
+export default projectDatas;

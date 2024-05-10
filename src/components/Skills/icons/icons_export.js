@@ -22,9 +22,10 @@ import illustrator from './illustrator.svg';
 import figma from './figma.svg';
 import googleAds from './google-ads.svg';
 import facebook from './facebook.svg';
-
+import premierPro from './premiere-pro.svg';
 
 export {
+    premierPro,
     facebook,
     googleAds,
     figma,
