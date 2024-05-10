@@ -35,7 +35,7 @@ const SkillsCard = ({title, techStack, description}) => {
       {once: true}
     }
     >
-      <Card className="w-full mt-5 bg-zinc-800">
+    <Card className="w-full mt-5 bg-zinc-800">
     <CardHeader>
       <CardTitle className="flex items-start justify-between gap-2 max-sm:text-xl">
         {title}
@@ -46,7 +46,7 @@ const SkillsCard = ({title, techStack, description}) => {
         <div
           alt="Soul Nest"
         //   className="w-full p-2 grid xl:grid-cols-4 grid-cols-4 md:gap-5 gap-2 md:grid-cols-3  rounded-md aspect-square bg-zinc-700 lg:max-h-[300px] md:max-h-[250px] sm:max-h-[200px]"
-          className="grid items-center w-full grid-cols-4 gap-2 p-3 rounded-md md:p-5 xl:grid-cols-4 md:gap-5 md:grid-cols-3 bg-zinc-700"
+          className="grid items-center w-full grid-cols-4 gap-2 p-3 rounded-md md:p-5 xl:grid-cols-4 md:gap-5 md:grid-cols-3 "
           height="200"
           width="200"
         >
